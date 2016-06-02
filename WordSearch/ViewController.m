@@ -28,6 +28,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 - (void)scrambleOriginalArray {
     _originalArray = [NSMutableArray arrayWithObjects:@"cat", @"dog", @"mike", @"Bart", @"Annyoed", @"WHY", nil];
     
@@ -40,8 +41,29 @@
     }
     
     _textField.text = [_originalArray componentsJoinedByString:@""];
+    _puzzleString = _textField.text;
     NSLog(@"%@", _textField.text);
 }
+
+- (IBAction)wordCheckButttonPressed:(id)sender {
+    [self checkPuzzleString:_puzzleString containingWords:_userInputText.text];
+}
+
+-(void)checkPuzzleString:(NSString*)puzzleString containingWords:(NSString*)userInputWords{
+    
+    userInputWords = _userInputText.text;
+    
+    NSRange range = [_puzzleString  rangeOfString: userInputWords options: NSCaseInsensitiveSearch];
+    NSLog(@"found: %@", (range.location != NSNotFound) ? @"Yes" : @"No");
+//    if (range.location != NSNotFound) {
+//       My logic to come
+//    }
+}
+
+
+
+
+
 
 
 @end

@@ -10,8 +10,11 @@
 
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextView *textField;
-@property (strong, nonatomic) NSString *puzzleArray;
+@property (strong, nonatomic) NSString *puzzleString;
 @property (strong, nonatomic) NSMutableArray *originalArray;
+
+@property (weak, nonatomic) IBOutlet UITextField *userInputText;
+- (IBAction)wordCheckButttonPressed:(id)sender;
 
 
 - (void)scrambleOriginalArray;

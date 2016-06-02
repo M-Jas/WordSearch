@@ -24,11 +24,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter words" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B1L-4Y-rtJ">
+                                <rect key="frame" x="102" y="269" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwf-pJ-bKC">
+                                <rect key="frame" x="38" y="269" width="44" height="30"/>
+                                <state key="normal" title="Check"/>
+                                <connections>
+                                    <action selector="wordCheckButttonPressed:" destination="LdO-93-zf2" eventType="touchUpInside" id="za3-AN-mDY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="textField" destination="qSe-z4-1Kd" id="iUc-VY-GHj"/>
+                        <outlet property="userInputText" destination="B1L-4Y-rtJ" id="hpS-tf-WQd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLA-ya-SJw" userLabel="First Responder" sceneMemberID="firstResponder"/>
